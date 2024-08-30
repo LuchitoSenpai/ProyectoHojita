@@ -31,9 +31,9 @@ function GaugeHumidity() {
         };
 
         fetchData();
-        const interval = setInterval(fetchData, 5000); // Actualiza cada 5 segundos
+        const interval = setInterval(fetchData, 5000);
 
-        return () => clearInterval(interval); // Limpia el intervalo al desmontar el componente
+        return () => clearInterval(interval); 
     }, []);
 
     const gaugeOptions = {
@@ -45,16 +45,16 @@ function GaugeHumidity() {
                 center: ['50%', '75%'],
                 radius: '90%',
                 min: 0,
-                max: 100, // Ajusta el máximo si es necesario
+                max: 4095, 
                 splitNumber: 8,
                 axisLine: {
                     lineStyle: {
                         width: 6,
                         color: [
-                            [0.25, '#FF6E76'],
-                            [0.5, '#FDDD60'],
-                            [0.75, '#58D9F9'],
-                            [1, '#7CFFB2']
+                            [0.25, '#a4ff7d'],
+                            [0.5, '#4dff00'],
+                            [0.75, '#32a800'],
+                            [1, '#237300']
                         ]
                     }
                 },
